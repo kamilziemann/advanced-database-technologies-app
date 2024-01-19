@@ -1,4 +1,4 @@
-# README for Database Connection Application
+# Database Connection Application
 
 ![Aoo](.github/example.png)
 

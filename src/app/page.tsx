@@ -5,8 +5,10 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useMutation } from '@tanstack/react-query';
 import { useEffect, useRef } from 'react';
+import { DEFAULT_HOST, DEFAULT_PORT } from '@/data';
 
 type DbConnectForm = {
+  host: string;
   dbName: string;
   login: string;
   password: string;
@@ -17,7 +19,9 @@ const TIME_TO_RESET_MUTATION = 5 * 1000;
 
 export default function Home() {
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
-  const { register, handleSubmit } = useForm<DbConnectForm>();
+  const { register, handleSubmit } = useForm<DbConnectForm>({
+    defaultValues: { host: DEFAULT_HOST, port: DEFAULT_PORT },
+  });
 
   const mutation = useMutation({
     mutationFn: (body: DbConnectForm) => axios.post('/api/dbconnect', body),
@@ -43,6 +47,7 @@ export default function Home() {
   return (
     <main className="bg-slate-800 min-h-screen flex justify-center items-start p-24">
       <form className="w-full max-w-xl  flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
+        <Input label="Host" {...register('host', { required: true })} required />
         <Input label="Nazwa bazy danych" {...register('dbName', { required: true })} required />
         <Input label="Numer portu" {...register('port', { required: true })} required />
         <Input label="Login" {...register('login', { required: true })} required />

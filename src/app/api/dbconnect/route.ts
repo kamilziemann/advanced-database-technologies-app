@@ -1,3 +1,4 @@
+import { DEFAULT_HOST, DEFAULT_PORT } from '@/data';
 import { NextResponse } from 'next/server';
 import { Pool } from 'pg';
 
@@ -8,9 +9,6 @@ type Body = {
   port: number;
   host: string;
 };
-
-const DEFAULT_HOST = 'localhost';
-const DEFAULT_PORT = 5432;
 
 export async function POST(req: Request) {
   const { dbName, login, password, port, host }: Body = await req.json();

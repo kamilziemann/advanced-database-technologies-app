@@ -7,7 +7,7 @@ DEMO LINK: [https://advanced-database-technologies-app.vercel.app/](https://adva
 
 ## Overview
 
-This application is a full-stack web application built using Next.js. It provides a user interface for connecting to a database and a backend API for handling the connection requests. The application is managed using `pnpm`, an efficient package manager for JavaScript.
+This application is a full-stack web application built using Next.js. It provides a user interface for connecting to a database and a backend API for handling the connection requests.
 
 ## Example
 

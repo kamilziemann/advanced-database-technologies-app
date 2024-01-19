@@ -1,10 +1,15 @@
 # Database Connection Application
 
-![Aoo](.github/example.png)
+![App](.github/example.png)
+
 
 ## Overview
 
 This application is a full-stack web application built using Next.js. It provides a user interface for connecting to a database and a backend API for handling the connection requests. The application is managed using `pnpm`, an efficient package manager for JavaScript.
+
+## Example
+
+![App Gif](.github/example.gif)
 
 ## Features
 

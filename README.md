@@ -1,4 +1,5 @@
 # Database Connection Application
+// This project is for university studies - as a course requirement.
 
 DEMO LINK: [https://advanced-database-technologies-app.vercel.app/](https://advanced-database-technologies-app.vercel.app/)
 
